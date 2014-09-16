@@ -1,0 +1,45 @@
+/*
+Error: Invalid US-ASCII character "\xE5"
+        on line 16 of common.sass
+
+11: 	src: url("CabinSketch-Bold.ttf")
+12: @font-face
+13: 	font-family: "JMAD"
+14: 	src: url("JustMeAgainDownHere.ttf")
+15: 
+16: $level2_font: '小塚ゴシック Pr6N EL',sans-serif
+17: $base_font-color: #ccc
+18: $base_font-size: 16px
+19: $point_font-color: #CC52F8
+20: 
+21: @mixin border-btm
+
+Backtrace:
+common.sass:16
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/util.rb:1265:in `rescue in block in find_encoding_error'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/util.rb:1262:in `block in find_encoding_error'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/util.rb:1261:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/util.rb:1261:in `each_with_index'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/util.rb:1261:in `find_encoding_error'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/util.rb:838:in `check_sass_encoding'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/engine.rb:423:in `check_encoding!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/engine.rb:379:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/exec/sass_scss.rb:329:in `watch_or_update'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/exec/sass_scss.rb:50:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/exec/base.rb:40:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.1/bin/sass:13:in `<top (required)>'
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE5\"\A         on line 16 of common.sass\A \A 11: 	src: url(\"CabinSketch-Bold.ttf\")\A 12: @font-face\A 13: 	font-family: \"JMAD\"\A 14: 	src: url(\"JustMeAgainDownHere.ttf\")\A 15: \A 16: $level2_font: '小塚ゴシック Pr6N EL',sans-serif\A 17: $base_font-color: #ccc\A 18: $base_font-size: 16px\A 19: $point_font-color: #CC52F8\A 20: \A 21: @mixin border-btm"; }

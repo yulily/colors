@@ -1,0 +1,202 @@
+extends ./draw-layout
+block content
+    section.sub-header-navi.clearfix
+        p 直径：
+        div
+            p
+                span.altText value
+    section.main.clearfix
+        aside.tool
+            ul
+                li.use.pen
+                    img(src='/images/parts.png', height='195', width='241', alt='ペン')
+                li.figure
+                    img(src='/images/parts.png', height='195', width='241', alt='図形')
+                li.frame
+                    img(src='/images/parts.png', height='195', width='241', alt='フレーム一覧')
+                li.stamp
+                    img(src='/images/parts.png', height='195', width='241', alt='スタンプ一覧')
+                li.local-result
+                    img(src='/images/parts.png', height='195', width='241', alt='ローカル保存一覧')
+                li.webcamera
+                    img(src='/images/parts.png', height='195', width='241', alt='カメラ')
+                li.instagram
+                    img(src='/images/parts.png', height='195', width='241', alt='Instagram')
+        section.canvas
+            article
+                header
+                    h1.title Your canvas
+                ul#canvas
+                    li
+                        canvas(width='851', height='315')
+                    li
+                        canvas(width='851', height='315')
+                    li
+                        canvas(width='851', height='315')
+                    li
+                        canvas(width='851', height='315')
+                    li
+                        canvas(width='851', height='315')
+            .clearfix
+                section.clearfix.stage
+                    .show.slide.stamp
+                        .slide_inner
+                            ul.clearfix.s
+                                li
+                                    img(src='/images/stamp/stamp01.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/stamp/stamp02.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/stamp/stamp03.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/stamp/stamp04.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/stamp/stamp01.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/stamp/stamp02.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/stamp/stamp03.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/stamp/stamp04.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/stamp/stamp02.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/stamp/stamp02.png', width='50', height='50', alt='')
+                    .slide.frame
+                        .slide_inner
+                            ul.clearfix.f
+                                li
+                                    img(src='/images/frame/frame01.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/frame/frame02.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/frame/frame03.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/frame/frame04.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/frame/frame05.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/frame/frame01.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/frame/frame02.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/frame/frame03.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/frame/frame04.png', width='50', height='50', alt='')
+                                li
+                                    img(src='/images/frame/frame05.png', width='50', height='50', alt='')
+                    .slide.instagram
+                        .slide_inner
+                            ul.clearfix.i
+                                li
+                                li
+                                li
+                                li
+                                li
+                                li
+                                li
+                                li
+                                li
+                                li
+                                li
+                                li
+                                li
+                                li
+                                li
+                    aside
+                        ul.clearfix
+                            li.altText 前へ
+                            li.altText 次へ
+                section.chat
+                    header.drag
+                        h1 チャット
+                    div
+                        ul
+                            li
+                            li
+                            li
+                            li
+                            li
+                            li
+                        .clearfix
+                            p Name:
+                            input(type='text')
+        aside.funciton
+            section#tab1.cur
+                header.drag
+                    h1 カラー
+                dl.tab-i.palet
+                    dt.title パレット
+                    dd#palet
+                        form
+                            input#color(type='text', name='color', value='#123456')
+                        #colorpicker
+                        ul.imcus.clearfix
+                            li #444
+                            li #444
+                            li #444
+                            li #444
+                            li #444
+                            li #444
+                            li #444
+                            li #444
+                            li #444
+                            li #444
+                        form#form(action='paletCreate.php', method='post', enctype='multipart/form-data')
+                            ul.cust.clearfix
+                                li
+                                    input#t3(type='text', name='c2', value='#ddd', size='6')
+                                li
+                                    input#t4(type='text', name='c2', value='#ddd', size='6')
+                                li
+                                    input#t5(type='text', name='c2', value='#ddd', size='6')
+                                li
+                                    input#t6(type='text', name='c2', value='#ddd', size='6')
+                                li
+                                    input#t7(type='text', name='c2', value='#ddd', size='6')
+                                li
+                                    input#t8(type='text', name='c2', value='#ddd', size='6')
+                                li
+                                    input#t9(type='text', name='c2', value='#ddd', size='6')
+                                li
+                                    input#t10(type='text', name='c2', value='#ddd', size='6')
+                                li
+                                    input#t11(type='text', name='c2', value='#ddd', size='6')
+                                li
+                                    input#t12(type='text', name='c2', value='#ddd', size='6')
+                    dt パレットを画像から自動的に生成する
+                    dd
+                        input#img(type='file', name='img', value='')
+                    dd.error
+            section#tab2
+                header.drag
+                    h1 レイヤー
+                .tab-i.layer
+                    ol#sortable.clearfix
+                        li
+                            img.layer(src='', width='50', height='34', alt='')
+                            span レイヤー4
+                        li
+                            img.layer(src='', width='50', height='34', alt='')
+                            span レイヤー3
+                        li
+                            img.layer(src='', width='50', height='34', alt='')
+                            span レイヤー2
+                        li
+                            img.layer(src='', width='50', height='34', alt='')
+                            span レイヤー1
+                    footer.layer-func
+                        ul.clearfix
+                            li
+                                img#layer-plus(src='/image/parts.png', height='195', width='241', alt='')
+                            li
+                                img#layer-delete(src='/image/parts.png', height='195', width='241', alt='')
+            section.info
+                header.drag
+                    h1 情報
+                dl
+                    dt X:
+                    dd#x 0
+                dl
+                    dt Y:
+                    dd#y 0

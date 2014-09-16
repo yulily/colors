@@ -1,0 +1,13 @@
+extends ./layout
+block content
+    section#description
+        header
+            h1.altText 説明動画
+        p.indexword
+            | ブラウザ上で色んな人と話しながら
+            br
+            | 絵を描けるサイトです。
+        figure.vimeo
+            figcaption.altText ABOUT COLORS.
+        p#btn-draw
+            a.alttext.JMAD(href='/draw', title='Draw') Draw

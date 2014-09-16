@@ -1,0 +1,316 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "Title";
+  src: url("CabinSketch-Bold.ttf");
+}
+
+@font-face {
+  font-family: "JMAD";
+  src: url("JustMeAgainDownHere.ttf");
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 75%;
+  min-height: 100%;
+  height: 100%;
+  line-height: 1.6em;
+  color: #cccccc;
+  background-color: #333333;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection, ::-moz-selection {
+  background: transparent;
+}
+
+body, .index, #wrap, #wrap_in, footer {
+  font: 13px/1.2 Arial, sans-serif;
+  font-family: "Franklin Gothic Book", "ＭＳ ゴシック", "小塚ゴシック Pr6N R", "Hiragino Kaku Gothic Pro", hiragino, Arial, Helvetica, sans-serif;
+}
+
+body, .index, #wrap, #wrap_in {
+  min-height: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  border: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.note {
+  color: #aaaaaa;
+  font-size: 85%;
+}
+
+article > header h1 {
+  font-family: "Title";
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-bottom: 28px;
+}
+article > header h1 span {
+  color: #cc52f8;
+}
+
+.altText {
+  height: 0;
+  border: none !important;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+}
+
+input {
+  border: none;
+  vertical-align: middle;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.JMAD {
+  font-family: "JMAD";
+}
+
+.page {
+  background: url(/images/bg-wide.png) #333333 left 30px repeat-x;
+}
+.page #wrap {
+  min-height: 100%;
+  margin: 0 auto -36px;
+  background: url(/images/bg-long.png) top center repeat-y;
+}
+.page #wrap #wrap_in {
+  margin: 0 auto;
+  padding-top: 75px;
+}
+.page #wrap #wrap_in .inner {
+  width: 446px;
+  height: 100%;
+  margin: 0 auto;
+}
+.page #wrap #wrap_in .inner article {
+  width: 320px;
+  float: left;
+}
+.page #wrap #wrap_in .inner article #description > header {
+  overflow: visible;
+  position: relative;
+}
+.page #wrap #wrap_in .inner article #description > header h1 {
+  width: 496px;
+  color: #cccccc;
+  font-family: "小塚ゴシック Pr6N EL", sans-serif;
+  font-size: 16px;
+  border-bottom: 1px solid #666666;
+  margin-bottom: 15px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  text-align: left;
+  position: relative;
+  left: -20px;
+  z-index: 1;
+}
+.page #wrap #wrap_in .inner article #description {
+  width: 320px;
+  padding-bottom: 116px;
+  position: relative;
+}
+.page #wrap #wrap_in .inner article #description .indexword {
+  line-height: 120%;
+  font-size: 12px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.page #wrap #wrap_in .inner article #description .vimeo {
+  width: 320px;
+  height: 225px;
+  margin-bottom: 25px;
+  background-color: #cccccc;
+  -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.65);
+  -ms-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.65);
+}
+.page #wrap #wrap_in .inner article #description #btn-draw {
+  height: 93px;
+  width: 92px;
+  text-align: center;
+  line-height: 86px;
+  margin: 0 auto;
+  vertical-align: middle;
+  font-size: 30px;
+  background: url(/images/btn-draw.png) no-repeat;
+}
+.page #wrap #wrap_in .inner article #description .about-image {
+  margin-bottom: 15px;
+}
+.page #wrap #wrap_in .inner article #description .read {
+  width: 320px;
+  color: #eeeeee;
+}
+.page #wrap #wrap_in .inner article #description .read p {
+  margin-bottom: 18px;
+}
+.page #wrap #wrap_in .inner article #description ol li {
+  margin-bottom: 20px;
+}
+.page #wrap #wrap_in .inner article #description ol li p, .page #wrap #wrap_in .inner article #description ol li figure {
+  float: left;
+}
+.page #wrap #wrap_in .inner article #description ol li p {
+  width: 169px;
+  margin: 11px 13px 0;
+}
+.page #wrap #wrap_in .inner article #description ol li figure {
+  width: 125px;
+}
+.page #wrap #wrap_in .inner article #description ol li span {
+  color: #cc52f8;
+}
+.page #wrap #wrap_in .inner article #description .cross {
+  height: auto;
+}
+.page #wrap #wrap_in .inner article #description .cross ul li {
+  font-size: 30px;
+}
+.page #wrap #wrap_in .inner article #description .cross ul li:nth-child(1),
+.page #wrap #wrap_in .inner article #description .cross ul li:nth-child(4) {
+  float: left;
+  margin-right: 165px;
+}
+.page #wrap #wrap_in .inner article #description .cross ul li:nth-child(2),
+.page #wrap #wrap_in .inner article #description .cross ul li:nth-child(5) {
+  float: right;
+}
+.page #wrap #wrap_in .inner article #description .cross ul li:nth-child(4),
+.page #wrap #wrap_in .inner article #description .cross ul li:nth-child(5) {
+  margin-bottom: 48px;
+}
+.page #wrap #wrap_in .inner article #description .cross ul .sitemap-image {
+  width: 160px;
+  float: none;
+  clear: both;
+  padding-top: 13px;
+  margin: 0 auto;
+}
+.page #wrap #wrap_in .inner article #description .sitemap-li li {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #666666;
+  margin-bottom: 15px;
+  padding-bottom: 3px;
+}
+.page #wrap #wrap_in .inner article #description .sitemap-li li header h1 {
+  width: 320px;
+  padding-bottom: 5px;
+}
+.page #wrap #wrap_in .inner nav {
+  width: 82px;
+  margin: 125px 0 0 44px;
+  float: left;
+}
+.page #wrap #wrap_in .inner nav li {
+  padding-left: 21px;
+  margin-bottom: 20px;
+  background: url(/images/nav-list-icon.png) no-repeat;
+}
+.page #wrap #wrap_in .inner nav li a {
+  color: #cccccc;
+  font-family: "小塚ゴシック Pr6N EL", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+.page footer {
+  width: 446px;
+  height: 36px;
+  margin: 0 auto;
+  background: url(/images/footer.png) bottom left no-repeat;
+}
+.page footer p {
+  color: #212121;
+  padding: 18px 0 0 30px;
+}

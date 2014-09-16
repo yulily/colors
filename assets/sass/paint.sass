@@ -1,0 +1,338 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@charset "utf-8"
+@import common
+@import base
+@import mixin
+
+.title
+	display: none
+.drag
+	cursor: move
+.clickzone
+	width: 100%
+	height: 100%
+	z-index: 999
+.mainview
+	height: 100%
+	min-height: 100%
+#wrap
+	margin: 0 auto -36px
+body
+	font-size: 75%
+	-webkit-font-smoothing: antialiased
+	.header-navi
+		@include border-btm
+		padding: 5px 15px 7px
+		header
+			margin-right: 20px
+			float: left
+			h1
+				padding-top: 2px
+				font-size: 22.3px
+				font-family: 'Title'
+				span
+					color: $point_font-color
+		nav
+			padding-top: 2px
+			float: left
+			ul li
+				cursor: pointer
+				display: inline-block
+				overflow: hidden
+				width: 29px
+				height: 24px
+				float: left
+			ul li:hover
+				opacity: .6
+			.back img
+				margin: -41px 0 0 -25px
+			.next img
+				margin: -41px 0 0 -54px	
+			.local-save img
+				margin: -41px 0 0 -80px
+			.delete img
+				margin: -41px 0 0 -107px
+			.save
+				width: 63px
+				height: 22px
+				line-height: 22px
+				vertical-align: middle
+				text-align: center
+				font-family: "JMAD"
+				font-size: 18px
+				background: url(/images/parts.png) -131px -42px no-repeat
+	.sub-header-navi
+		@include border-btm
+		padding: 3px 30px 1px
+		p
+			line-height: 16px
+			float: left
+		div
+			width: 241px
+			height: 21px
+			overflow: hidden
+			float: left
+			p
+				width: 241px
+				height: 10px
+				position: relative
+				background: url(/images/parts.png) 0px 6px no-repeat
+				span
+					width: 61px
+					height: 16px
+					top: 0%
+					left: 0%
+					position: absolute
+					background: url(/images/parts.png) 0px -179px no-repeat
+	.main
+		width: 1214px
+		margin: 10px auto
+		color: #222
+		padding: 10px 25px 15px
+		.tool
+			@include tabbg
+			width: 39px
+			padding-top: 15px
+			position: relative
+			float: left
+			ul
+				z-index: 1
+				min-height: 315px
+				padding: 3px 0 15px 0
+				@include bar-bg
+				li
+					width: 25px
+					height: 23px
+					text-align: center
+					cursor: pointer
+					overflow: hidden
+					margin: 8px auto
+					padding: 1px 0
+				li:hover
+					background-color: #eee
+				li.use
+					-webkit-border-radius: 2px
+					border-radius: 2px
+					border: 1px solid #444
+					background-color: #eee
+				.pen img
+					margin: -7px 0 0 0px
+				.figure img
+					margin: -32px 0 0 0px
+				.frame img
+					margin: -55px 0 0 0px
+				.stamp img
+					margin: -79px 0 0 0px
+				.local-result img
+					margin: -105px 0 0 0px
+				.webcamera img
+					margin: -129px 0 0 0px
+				.instagram img
+					margin: -155px 0 0 0px
+		article
+			margin-bottom: 20px
+		.canvas
+			width: 851px
+			height: 315px
+			border: 1px solid #666
+			background-color: #D9D9D9
+			margin: 0 18px
+			float: left
+			article
+				#canvas
+					width: 851px
+					height: 315px
+					position: relative
+					li
+						position: absolute
+
+		.stage
+			width:  456px
+			height: 128px
+			float: left
+			overflow: hidden
+			margin-top: 26px
+			background-color: #B1B1B1
+			-webkit-box-shadow: inset 0px 0px 12px #111
+			box-shadow: inset 0px 0px 12px #111
+			display: -webkit-box
+			display: -moz-box
+			aside
+				width: 133px
+				padding: 57px 0 0
+				position: relative
+				p
+					width: 32px
+					height: 25px
+					position: absolute
+					top: 4px
+					right: 4px
+					background: url(/images/parts.png) -26px -66px no-repeat
+				ul
+					width: 64px
+					height: 19px
+					margin-left: 35px
+					overflow: hidden
+					display: -webkit-box
+					display: -moz-box
+					background: url(/images/parts.png) -26px -21px no-repeat
+					li
+						width: 30px
+						height: 19px
+						margin-right: 4px
+
+		.stage > div
+			width: 323px
+			display: none
+		.stage > div.show
+			display: block
+			div li
+				width: 50px
+				height: 50px
+				float: left
+				margin: 10px 0 0 10px
+				-webkit-box-shadow: 0px 0px 7px #111
+				box-shadow: 0px 0px 7px #111
+				background-color: #CCC
+		.chat
+			width: 372px
+			float: right
+			color: #fff
+			@include tabbg
+			@include chat-tabbg
+			margin-bottom: 12px
+			header
+				padding: 7px
+			div
+				@include bar-bg
+				ul
+					width: 100%
+					height: 100px
+					li
+						padding: 7px 8px 
+						border-bottom: 1px dashed #999
+				div
+					@include chat-tabbg
+					padding: 5px 10px
+					height: 20px
+					p,input
+						float: left
+					p
+						line-height: 20px
+						vertical-align: middle
+						margin-right: 6px
+					input
+						width: 200px
+						padding: 1px 5px
+						background-color: #ffffff
+						-webkit-border-radius: 11px
+						border-radius: 11px
+						-webkit-box-shadow: inset 0px 0px 8px #0f021c
+						box-shadow: inset 0px 0px 8px #0f021c
+		.funciton
+			width: 282px
+			float: left
+			position: relative				
+			section > dl,
+			section > ul,
+			section > div
+				padding: 10px 5px
+				@include bar-bg
+			section header
+				padding: 7px
+			#tab1 header,#tab2 header
+				width: 70px
+				cursor: pointer
+				@include tabbg
+			#tab2 header
+				position: absolute
+				cursor: pointer
+				top: 0
+				left: 84px
+			#tab1 dl,#tab2 div
+				display: none
+			#tab2.cur,#tab1.cur
+				margin-bottom: 12px
+				header
+					@include tabbg-c
+				.tab-i
+					display: block
+			#tab1
+				dt
+					padding: 5px 0
+				.imcus,.cust
+					display: -webkit-box
+					display: -moz-box
+				.imcus li
+					width: 25px
+					height: 25px
+					margin-left: 2px
+					text-indent: -9999px
+					cursor: pointer
+					background-color: #444
+					-webkit-box-ordinal-group: 1
+					box-ordinal-group: 1
+				.cust li
+					width: 27px
+					margin: 5px 0
+					display: block
+					-webkit-box-ordinal-group: 1
+					box-ordinal-group: 1
+					input
+						width: 23px
+						border: 1px solid #333
+			#tab2
+				.layer
+					ol
+						li
+							height: 44px
+							line-height: 44px
+							vertical-align: middle
+							img
+								width: 50px
+								height: 34px
+								vertical-align: middle
+								background-image: url("../image/bg_none.png")
+					.layer-func
+						margin: 5px 0 0
+						border-top: 1px solid #999999
+						li
+							width: 15px
+							height: 15px
+							margin-left: 5px
+							overflow: hidden
+							#layer-plus
+								margin: -66px 0 0 -58px
+							#layer-delete
+								margin: -66px 0 0 -74px
+					ul
+						text-align: right
+						padding-top: 5px
+						border-top: 1px solid #E3E3E3
+						li
+							display: inline-block
+							float: left
+			.info dl
+				padding: 5px
+				display: -webkit-box
+				display: -moz-box
+				dt,dd
+					padding-right: 3px
+					-webkit-box-ordinal-group: 1
+					-moz-box-ordinal-group: 1
+					box-ordinal-group: 1
+			.info
+				@include tabbg
+				margin-bottom: 12px
+#paint
+	width: 1210px
+	height: 36px
+	margin: -36px auto 0
+	background: url(/image/footer.png) bottom left no-repeat
+	p
+		color: #212121
+		padding: 18px 0 0 30px
+

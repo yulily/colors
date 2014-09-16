@@ -1,0 +1,136 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@charset "utf-8"
+@import "compass/reset"
+@import "compass/css3"
+@import base
+@import mixin
+
+.page
+	background: url(/images/bg-wide.png) #333 left 30px repeat-x
+	#wrap
+		min-height: 100%
+		margin: 0 auto -36px
+		background: url(/images/bg-long.png) top center repeat-y
+		#wrap_in
+			margin: 0 auto
+			padding-top: 75px
+			.inner
+				width: 446px
+				height: 100%
+				margin: 0 auto
+				article
+					width: 320px
+					float: left
+					#description > header
+						overflow: visible
+						position: relative
+					#description > header h1
+						width: 496px
+						color: $base_font-color
+						font-family: $level2_font
+						font-size: $base_font-size
+						@include border-btm
+						padding-left: 6px
+						text-align: left
+						position: relative
+						left: -20px
+						z-index: 1
+					#description
+						width: 320px
+						padding-bottom: 116px
+						position: relative
+						.indexword
+							line-height: 120%
+							font-size: 12px
+							margin-bottom: 25px
+							text-align: center
+						.vimeo
+							width: 320px
+							height: 225px
+							margin-bottom: 25px
+							background-color: #ccc
+							@include css3-p(box-shadow,0px 0px 7px rgba(0, 0, 0, 0.65))
+						#btn-draw
+							height: 93px
+							width: 92px
+							text-align: center
+							line-height: 86px
+							margin: 0 auto
+							vertical-align: middle
+							font-size: 30px
+							background: url(/images/btn-draw.png) no-repeat
+						//about
+						.about-image
+							margin-bottom: 15px
+						.read
+							width: 320px
+							color: #eee
+							p
+								margin-bottom: 18px
+						//how to
+						ol
+							li
+								margin-bottom: 20px
+								p,figure
+									float: left
+								p
+									width: 169px
+									margin: 11px 13px 0
+								figure
+									width: 125px
+								span
+									color: $point_font-color
+						//sitemap
+						.cross
+							height: auto
+							ul
+								li
+									font-size: 30px
+								li:nth-child(1),
+								li:nth-child(4)
+									float: left
+									margin-right: 165px
+								li:nth-child(2),
+								li:nth-child(5)
+									float: right
+								li:nth-child(4),
+								li:nth-child(5)
+									margin-bottom: 48px
+								.sitemap-image
+									width: 160px
+									float: none
+									clear: both
+									padding-top: 13px
+									margin: 0 auto
+						.sitemap-li
+							li
+								padding-bottom: 5px
+								@include border-btm
+								header
+									h1
+										width: 320px
+										padding-bottom: 5px
+				nav
+					width: 82px
+					margin: 125px 0 0 44px
+					float: left
+					li
+						padding-left: 21px
+						margin-bottom: 20px
+						background: url(/images/nav-list-icon.png) no-repeat
+						a
+							color: $base_font-color
+							font-family: $level2_font
+							-webkit-font-smoothing: antialiased
+							font-size: $base_font-size
+	footer
+		width: 446px
+		height: 36px
+		margin: 0 auto
+		background: url(/images/footer.png) bottom left no-repeat
+		p
+			color: #212121
+			padding: 18px 0 0 30px
