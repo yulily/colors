@@ -46,19 +46,21 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-      view: 'index'
-  },
   '/about': {
-      view: 'about'
+      view: 'about',
+      controller: 'common'
   },
   '/how': {
-      view: 'how'
+      view: 'how',
+      controller: 'common'
   },
   '/sitemap': {
-      view: 'sitemap'
+      view: 'sitemap',
+      controller: 'common'
   },
   '/draw': {
-      view: 'draw'
+      view: 'draw',
+      controller: 'draw',
+      action: 'index'
   }
 };

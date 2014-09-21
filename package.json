@@ -5,6 +5,7 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "coffee-script": "^1.8.0",
     "ejs": "~0.8.4",
     "gulp": "^3.8.7",
     "gulp-autoprefixer": "0.0.8",

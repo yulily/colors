@@ -15,12 +15,12 @@
 module.exports = function(gulp, plugins, growl) {
 	gulp.task('sails-linker-gulp:devJs', function() {
 		// Read templates
-		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
+		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/*.jade'])
 				// Link the JavaScript
 				.pipe(plugins.linker({
 					scripts: [require('../pipeline').jsFilesToInject],
-					startTag: '<!--SCRIPTS-->',
-					endTag: '<!--SCRIPTS END-->',
+					startTag: '// SCRIPTS',
+					endTag: '// SCRIPTS END',
 					fileTmpl: '<script src="%s"></script>',
 					appRoot: '.tmp/public'
 				}))
@@ -31,12 +31,12 @@ module.exports = function(gulp, plugins, growl) {
 	  
 	gulp.task('sails-linker-gulp:devJsRelative', function() {
 		// Read templates
-		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
+		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/*.jade'])
 				// Link the JavaScript
 				.pipe(plugins.linker({
 					scripts: [require('../pipeline').jsFilesToInject],
-					startTag: '<!--SCRIPTS-->',
-					endTag: '<!--SCRIPTS END-->',
+					startTag: '// SCRIPTS',
+					endTag: '// SCRIPTS END',
 					fileTmpl: '<script src="%s"></script>',
 					appRoot: '.tmp/public',
 					relative: true
@@ -48,12 +48,12 @@ module.exports = function(gulp, plugins, growl) {
 	
 	gulp.task('sails-linker-gulp:prodJs', function() {
 		// Read templates
-		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
+		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/*.jade'])
 				// Link the JavaScript
 				.pipe(plugins.linker({
 					scripts: ['.tmp/public/min/production.min.js'],
-					startTag: '<!--SCRIPTS-->',
-					endTag: '<!--SCRIPTS END-->',
+					startTag: '// SCRIPTS',
+					endTag: '// SCRIPTS END',
 					fileTmpl: '<script src="%s"></script>',
 					appRoot: '.tmp/public'
 				}))
@@ -64,12 +64,12 @@ module.exports = function(gulp, plugins, growl) {
 	
 	gulp.task('sails-linker-gulp:prodJsRelative', function() {
 		// Read templates
-		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
+		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/*.jade'])
 				// Link the JavaScript
 				.pipe(plugins.linker({
 					scripts: ['.tmp/public/min/production.min.js'],
-					startTag: '<!--SCRIPTS-->',
-					endTag: '<!--SCRIPTS END-->',
+					startTag: '// SCRIPTS',
+					endTag: '// SCRIPTS END',
 					fileTmpl: '<script src="%s"></script>',
 					appRoot: '.tmp/public',
 					relative: true
@@ -81,11 +81,11 @@ module.exports = function(gulp, plugins, growl) {
 	
 	gulp.task('sails-linker-gulp:devStyles', function() {
 		// Read templates
-		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
+		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/*.jade'])
 				.pipe(plugins.linker({
 					scripts: [require('../pipeline').cssFilesToInject],
-					startTag: '<!--STYLES-->',
-					endTag: '<!--STYLES END-->',
+					startTag: '// STYLES',
+					endTag: '// STYLES END',
 					fileTmpl: '<link rel="stylesheet" href="%s">',
 					appRoot: '.tmp/public'
 				}))
@@ -96,11 +96,11 @@ module.exports = function(gulp, plugins, growl) {
   
   	gulp.task('sails-linker-gulp:devStylesRelative', function() {
 		// Read templates
-		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
+		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/*.jade'])
 				.pipe(plugins.linker({
 					scripts: [require('../pipeline').cssFilesToInject],
-					startTag: '<!--STYLES-->',
-					endTag: '<!--STYLES END-->',
+					startTag: '// STYLES',
+					endTag: '// STYLES END',
 					fileTmpl: '<link rel="stylesheet" href="%s">',
 					appRoot: '.tmp/public',
 					relative: true
@@ -112,11 +112,11 @@ module.exports = function(gulp, plugins, growl) {
 
 	gulp.task('sails-linker-gulp:prodStyles', function() {
 		// Read templates
-		return gulp.src(['.tmp/public/index.html', 'views/**/*.html', 'views/**/*.ejs'])
+		return gulp.src(['.tmp/public/index.html', 'views/**/*.html', 'views/*.jade'])
 				.pipe(plugins.linker({
 					scripts: ['.tmp/public/min/production.min.css'],
-					startTag: '<!--STYLES-->',
-					endTag: '<!--STYLES END-->',
+					startTag: '// STYLES',
+					endTag: '// STYLES END',
 					fileTmpl: '<link rel="stylesheet" href="%s">',
 					appRoot: '.tmp/public'
 				}))
@@ -127,11 +127,11 @@ module.exports = function(gulp, plugins, growl) {
 	
   	gulp.task('sails-linker-gulp:prodStylesRelative', function() {
 		// Read templates
-		return gulp.src(['.tmp/public/index.html', 'views/**/*.html', 'views/**/*.ejs'])
+		return gulp.src(['.tmp/public/index.html', 'views/**/*.html', 'views/*.jade'])
 				.pipe(plugins.linker({
 					scripts: ['.tmp/public/min/production.min.css'],
-					startTag: '<!--STYLES-->',
-					endTag: '<!--STYLES END-->',
+					startTag: '// STYLES',
+					endTag: '// STYLES END',
 					fileTmpl: '<link rel="stylesheet" href="%s">',
 					appRoot: '.tmp/public',
 					relative: true
@@ -143,12 +143,12 @@ module.exports = function(gulp, plugins, growl) {
 	
 	gulp.task('sails-linker-gulp:devTpl', function() {
 		// Read templates
-		return gulp.src(['.tmp/public/index.html', 'views/**/*.html', 'views/**/*.ejs'])
+		return gulp.src(['.tmp/public/index.html', 'views/**/*.html', 'views/*.jade'])
 				// Link the JST Templates
 				.pipe(plugins.linker({
 					scripts: ['.tmp/public/jst.js'],
-					startTag: '<!--TEMPLATES-->',
-					endTag: '<!--TEMPLATES END-->',
+					startTag: '// TEMPLATES',
+					endTag: '// TEMPLATES END',
 					fileTmpl: '<script type="text/javascript" src="%s"></script>',
 					appRoot: '.tmp/public',
 				}))

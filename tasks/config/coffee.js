@@ -9,9 +9,9 @@
  */
 module.exports = function(gulp, plugins, growl) {
 	gulp.task('coffee:dev', function() {
-		gulp.src('assets/js/**/**.coffee')
+		gulp.src('api/controllers/**.coffee')
 		.pipe(plugins.coffee({bare: true}).on('error', plugins.util.log))
-		.pipe(gulp.dest('.tmp/public/js/'))
+		.pipe(gulp.dest('api/controllers/'))
 		.pipe(plugins.if(growl, plugins.notify({ message: 'Coffee compile task complete' })));
 	});
 };

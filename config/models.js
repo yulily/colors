@@ -17,6 +17,6 @@ module.exports.models = {
   * connections (see `config/connections.js`)                                *
   *                                                                          *
   ***************************************************************************/
-
+  migrate : "safe"
   // connection: 'localDiskDb'
 };
