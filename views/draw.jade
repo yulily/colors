@@ -4,9 +4,9 @@ block content
         p 直径：
         div
             p
-                span.altText value
+                span#pen-width.altText value
     section.main.clearfix
-        aside.tool
+        aside#asideTool.tool
             ul
                 li.use.pen
                     img(src='/images/parts.png', height='195', width='241', alt='ペン')
@@ -20,94 +20,34 @@ block content
                     img(src='/images/parts.png', height='195', width='241', alt='ローカル保存一覧')
                 li.webcamera
                     img(src='/images/parts.png', height='195', width='241', alt='カメラ')
-                li.instagram
-                    img(src='/images/parts.png', height='195', width='241', alt='Instagram')
         section.canvas
             article
                 header
                     h1.title Your canvas
                 ul#canvas
                     li
-                        canvas(width='851', height='315')
+                        canvas(width='1702', height='630')
                     li
-                        canvas(width='851', height='315')
+                        canvas(width='1702', height='630')
                     li
-                        canvas(width='851', height='315')
+                        canvas(width='1702', height='630')
                     li
-                        canvas(width='851', height='315')
+                        canvas(width='1702', height='630')
                     li
-                        canvas(width='851', height='315')
+                        canvas(width='1702', height='630')
             .clearfix
-                section.clearfix.stage
+                section#optionTool.clearfix.stage
                     .show.slide.stamp
                         .slide_inner
-                            ul.clearfix.s
+                            ul(ng-controller="ViewItem").clearfix.s
                                 li
-                                    img(src='/images/stamp/stamp01.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/stamp/stamp02.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/stamp/stamp03.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/stamp/stamp04.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/stamp/stamp01.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/stamp/stamp02.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/stamp/stamp03.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/stamp/stamp04.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/stamp/stamp02.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/stamp/stamp02.png', width='50', height='50', alt='')
+                                    img(src='', width='50', height='50', alt='')
                     .slide.frame
                         .slide_inner
                             ul.clearfix.f
                                 li
-                                    img(src='/images/frame/frame01.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/frame/frame02.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/frame/frame03.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/frame/frame04.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/frame/frame05.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/frame/frame01.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/frame/frame02.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/frame/frame03.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/frame/frame04.png', width='50', height='50', alt='')
-                                li
-                                    img(src='/images/frame/frame05.png', width='50', height='50', alt='')
-                    .slide.instagram
-                        .slide_inner
-                            ul.clearfix.i
-                                li
-                                li
-                                li
-                                li
-                                li
-                                li
-                                li
-                                li
-                                li
-                                li
-                                li
-                                li
-                                li
-                                li
-                                li
-                    aside
-                        ul.clearfix
-                            li.altText 前へ
-                            li.altText 次へ
-                section.chat
+                                    img(src='', width='50', height='50', alt='')
+                section#chat.chat
                     header.drag
                         h1 チャット
                     div
@@ -142,7 +82,7 @@ block content
                             li #444
                             li #444
                             li #444
-                        form#form(action='paletCreate.php', method='post', enctype='multipart/form-data')
+                        form#paletForm
                             ul.cust.clearfix
                                 li
                                     input#t3(type='text', name='c2', value='#ddd', size='6')
@@ -185,7 +125,7 @@ block content
                         li
                             img.layer(src='', width='50', height='34', alt='')
                             span レイヤー1
-                    footer.layer-func
+                    fovoter.layer-func
                         ul.clearfix
                             li
                                 img#layer-plus(src='/images/parts.png', height='195', width='241', alt='')
@@ -194,9 +134,10 @@ block content
             section.info
                 header.drag
                     h1 情報
-                dl
-                    dt X:
-                    dd#x 0
-                dl
-                    dt Y:
-                    dd#y 0
+                div
+                    dl
+                        dt X:
+                        dd#x 0
+                    dl
+                        dt Y:
+                        dd#y 0

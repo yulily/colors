@@ -47,20 +47,17 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/about': {
-      view: 'about',
-      controller: 'common'
+      view: 'about'
   },
   '/how': {
-      view: 'how',
-      controller: 'common'
+      view: 'how'
   },
   '/sitemap': {
-      view: 'sitemap',
-      controller: 'common'
+      view: 'sitemap'
   },
   '/draw': {
       view: 'draw',
       controller: 'draw',
-      action: 'index'
+      'action:id?': 'index'
   }
 };

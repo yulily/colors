@@ -12,7 +12,7 @@
  */
 module.exports = function(gulp, plugins, growl) {
 	gulp.task('sync:dev', function() {
-		return gulp.src(['./assets/**/*.!(coffee|less)', '!assets/images{,/**}'])
+		return gulp.src(['./assets/**/*.!(coffee|sass)', '!assets/images{,/**}'])
 				.pipe(plugins.changed('.tmp/public'))
 				.pipe(gulp.dest('.tmp/public'))
 				.pipe(plugins.if(growl, plugins.notify({ message: 'Sync task complete' })));

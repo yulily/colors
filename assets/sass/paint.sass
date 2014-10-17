@@ -1,12 +1,5 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@charset "utf-8"
-@import common
 @import base
 @import mixin
-
 .title
 	display: none
 .drag
@@ -50,7 +43,7 @@ body
 			.back img
 				margin: -41px 0 0 -25px
 			.next img
-				margin: -41px 0 0 -54px	
+				margin: -41px 0 0 -54px
 			.local-save img
 				margin: -41px 0 0 -80px
 			.delete img
@@ -148,7 +141,9 @@ body
 					position: relative
 					li
 						position: absolute
-
+						canvas
+							width: 851px
+							height: 315px
 		.stage
 			width:  456px
 			height: 128px
@@ -213,7 +208,7 @@ body
 					width: 100%
 					height: 100px
 					li
-						padding: 7px 8px 
+						padding: 7px 8px
 						border-bottom: 1px dashed #999
 				div
 					@include chat-tabbg
@@ -236,7 +231,7 @@ body
 		.funciton
 			width: 282px
 			float: left
-			position: relative				
+			position: relative
 			section > dl,
 			section > ul,
 			section > div

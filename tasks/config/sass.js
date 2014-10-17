@@ -10,15 +10,15 @@
  */
 module.exports = function(gulp, plugins, growl) {
 
-	gulp.task('less:dev', function() {
-		return gulp.src('assets/styles/importer.less')
-				.pipe(
-					plugins.less({
-						expand: true,
-						ext: '.css'
-					})
-				)
-				.pipe(gulp.dest('.tmp/public/styles/'))
-				.pipe(plugins.if(growl, plugins.notify({ message: 'less dev task complete' })));
+	gulp.task('sass:dev', function() {
+//		return gulp.src('assets/sass/*.sass')
+//				.pipe(
+//					plugins.sass({
+//						expand: true,
+//						ext: '.css'
+//					})
+//				)
+//				.pipe(gulp.dest('.tmp/public/styles/'))
+//				.pipe(plugins.if(growl, plugins.notify({ message: 'sass dev task complete' })));
 	});
 };
