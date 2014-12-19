@@ -24,17 +24,15 @@ define [
       _Canvas.touchMove()
     "mouseup mouseout": () ->
       _Canvas.touchEnd()
-
-  # paint data layer
-  $("#canvas canvas").click ->
-    Draw::dbSave()
-    r = paintDb.length
-    DrawStart.layerInfo()
-    return
+    "click":()->
+      Draw::dbSave()
+      r = paintDb.length
+      DrawStart.layerInfo()
+      return
 
   # layer change
-  $("ol li").click ->
-    Draw.layerSet $(this)
+  $("#layer li").click ->
+
     return
 
   # controller
@@ -51,6 +49,20 @@ define [
     events:
       "click #tab1 header": "tabSwitch1"
       "click #tab2 header": "tabSwitch2"
+      "click #layer li": "layerSwitch"
+
+    tabSwitch1: ->
+      $html.tab2.removeClass "cur"
+      $html.tab1.addClass "cur"
+      return
+
+    tabSwitch2: ->
+      $html.tab1.removeClass "cur"
+      $html.tab2.addClass "cur"
+      return
+
+    layerSwitch: ->
+      Draw.layerSet $(@.el)
   )
 
   # controller
@@ -77,15 +89,6 @@ define [
     initialize:->
       _.bindAll(@)
 
-    tabSwitch1: ->
-      $html.tab2.removeClass "cur"
-      $html.tab1.addClass "cur"
-      return
-
-    tabSwitch2: ->
-      $html.tab1.removeClass "cur"
-      $html.tab2.addClass "cur"
-      return
   )
 
   # /_ plugin setting
