@@ -1,0 +1,34 @@
+extends ./layout
+block content
+    section#description
+        header
+            h1 Sitemap
+        .clearfix.cross
+            ul.JMAD.clearfix
+                li About
+                li How to
+                li.sitemap-image
+                    img(src='/images/sitemap-image.png', alt='サイトマップ', width='160', height='58')
+                li Sitemap
+                li Draw
+        ul.sitemap-li
+            li
+                header
+                    h1
+                        a(href='/about') About
+                p ・当サービスについて
+            li
+                header
+                    h1
+                        a(href='/howto') How to
+                p ・当サービスの使い方について
+            li
+                header
+                    h1
+                        a(href='/draw') Draw
+                p ・お絵描きするページです
+            li
+                header
+                    h1
+                        a(href='/sitemap') Sitemap
+                p ・サイトマップです
